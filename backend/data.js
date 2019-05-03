@@ -1,0 +1,164 @@
+var express = require('express');
+var app = express(); 
+var name;
+var sprite
+module.exports={ 
+	pokedetails: function(ide)
+	{
+	if(ide==1){name= "Bulbasaur" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"}
+	if(ide==2){name= "Ivyasur"	,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"}
+	if(ide==3){name= "Venusaur" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"}
+	if(ide==4){name= "charmender", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"}
+	if(ide==5){name= "Charmeleon" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"}
+	if(ide==6){name= "Charizard" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"}
+	if(ide==7){name= "Squirtle" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"}
+	if(ide==8){name= "Wartortle" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"}
+	if(ide==9){name= "Blastoise" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"}
+	if(ide==10){name= "Caterpie" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"}
+	if(ide==11){name= "Metapod" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png"}
+	if(ide==12){name= "Butterfree" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"}
+	if(ide==13){name= "Weedle" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png"}
+	if(ide==14){name= "Kakuna" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png"}
+	if(ide==15){name= "Beedrill", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png"}
+	if(ide==16){name= "Pidgey" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"}
+	if(ide==17){name= "Pidgeotto" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"}
+	if(ide==18){name= "Pidgeot" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png"}
+	if(ide==19){name= "Pidgey" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png"}
+	if(ide==20){name= "Raticate", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png"}
+	if(ide==21){name= "SPearow" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png"}
+	if(ide==22){name= "Fearow" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png"}
+	if(ide==23){name= "Ekans" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png"}
+	if(ide==24){name= "Arbok" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png"}
+	if(ide==25){name= "Pikachu", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"}
+	if(ide==26){name= "Raichu" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png"}
+	if(ide==27){name= "Sandshrew", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png"}
+	if(ide==28){name= "Sandslash" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png"}
+	if(ide==29){name= "Nidoran" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png"}
+	if(ide==30){name= "Nidorina" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png"}
+	if(ide==31){name= "Nidoqueen" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png"}
+	if(ide==32){name= "Nidoran" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png"}
+	if(ide==33){name= "Nidorino" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png"}
+	if(ide==34){name= "Nidoking" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png"}
+	if(ide==35){name= "Clefairy" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png"}
+	if(ide==36){name= "Clefable" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png"}
+	if(ide==37){name= "Vulpix" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png"}
+	if(ide==38){name= "Ninetales" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png"}
+	if(ide==39){name= "Jigglypuff" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"}
+	if(ide==40){name= "Wigglytuff" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png"}
+	if(ide==41){name= "Zubat" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png"}
+	if(ide==42){name= "Golbat" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png"}
+	if(ide==43){name= "Oddish" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png"}
+	if(ide==44){name= "Gloom" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png"}
+	if(ide==45){name= "Vileplum", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png"}
+	if(ide==46){name= "Paras" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png"}
+	if(ide==47){name= "Parasect", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png"}
+	if(ide==48){name= "Venonat" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png"}
+	if(ide==49){name= "Venomoth" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png"}
+	if(ide==50){name= "Diglett" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png"}
+	if(ide==51){name= "Dugtrio" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png"}
+	if(ide==52){name= "Meowth",sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png"}
+	if(ide==53){name= "Persian" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png"}
+	if(ide==54){name= "Psyduck", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png"}
+	if(ide==55){name= "Golduck" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png"}
+	if(ide==56){name= "Mankey" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png"}
+	if(ide==57){name= "Primeape" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png"}
+	if(ide==58){name= "Growlithe" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png"}
+	if(ide==59){name= "Arcanine" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png"}
+	if(ide==60){name= "Poliwag" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png"}
+	if(ide==61){name= "Poliwhirl" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png"}
+	if(ide==62){name= "Poliwrath" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png"}
+	if(ide==63){name= "Abra" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png"}
+	if(ide==64){name= "Kadabra" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png"}
+	if(ide==65){name= "Alakazam", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png"}
+	if(ide==66){name= "Machop" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png"}
+	if(ide==67){name= "Machoke" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png"}
+	if(ide==68){name= "Machamp" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png"}
+	if(ide==69){name= "Bellsprout" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png"}
+	if(ide==70){name= "Weepinbell", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png"}
+	if(ide==71){name= "Victreebel" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png"}
+	if(ide==72){name= "Tentacool" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png"}
+	if(ide==73){name= "Tentacruel" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png"}
+	if(ide==74){name= "Geodude" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png"}
+	if(ide==75){name= "Graveler", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png"}
+	if(ide==76){name= "Golem" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png"}
+	if(ide==77){name= "Ponyta", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png"}
+	if(ide==78){name= "Rapidash" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png"}
+	if(ide==79){name= "Slowpoke" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png"}
+	if(ide==80){name= "Slowbro" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png"}
+	if(ide==81){name= "Magnemite" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png"}
+	if(ide==82){name= "Magneton" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png"}
+	if(ide==83){name= "Farfetch'd" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png"}
+	if(ide==84){name= "Doduo" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png"}
+	if(ide==85){name= "Dodrio" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png"}
+	if(ide==86){name= "Seel" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png"}
+	if(ide==87){name= "Dewgong" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png"}
+	if(ide==88){name= "Grimer" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png"}
+	if(ide==89){name= "Muk" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png"}
+	if(ide==90){name= "Shellder" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png"}
+	if(ide==91){name= "CLoyster" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png"}
+	if(ide==92){name= "Gastly" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png"}
+	if(ide==93){name= "Haunter" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png"}
+	if(ide==94){name= "Gengar" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"}
+	if(ide==95){name= "Onix", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png"}
+	if(ide==96){name= "Drowzee" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png"}
+	if(ide==97){name= "Hypno", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png"}
+	if(ide==98){name= "Krabby" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png"}
+	if(ide==99){name= "Kingler" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png"}
+	if(ide==100){name= "VOltorb" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png"}
+	if(ide==101){name= "Electrode" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png"}
+	if(ide==102){name= "Exeggcute"	,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png"}
+	if(ide==103){name= "Exeggutor" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png"}
+	if(ide==104){name= "Cubone", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png"}
+	if(ide==105){name= "Marowak" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png"}
+	if(ide==106){name= "Hitmonlee" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png"}
+	if(ide==107){name= "Hitmonchan" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png"}
+	if(ide==108){name= "Lickitung" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png"}
+	if(ide==109){name= "koffling" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png"}
+	if(ide==110){name= "Weezing" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png"}
+	if(ide==111){name= "Rhyhorn" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png"}
+	if(ide==112){name= "Rhydon" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png"}
+	if(ide==113){name= "Chansey" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png"}
+	if(ide==114){name= "Tangela" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png"}
+	if(ide==115){name= "Kangaskhan", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png"}
+	if(ide==116){name= "Horsea" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png"}
+	if(ide==117){name= "Seadra" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png"}
+	if(ide==118){name= "Goldeen" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png"}
+	if(ide==119){name= "Seaking" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png"}
+	if(ide==120){name= "Staryu", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png"}
+	if(ide==121){name= "Starmie" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png"}
+	if(ide==122){name= "Mr.Mime" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"}
+	if(ide==123){name= "Scyther" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png"}
+	if(ide==124){name= "Jynx" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png"}
+	if(ide==125){name= "Electabuzz", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png"}
+	if(ide==126){name= "Magmar" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png"}
+	if(ide==127){name= "Pinsir", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png"}
+	if(ide==128){name= "Tauros" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png"}
+	if(ide==129){name= "Magikarp" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png"}
+	if(ide==130){name= "Gyarados" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png"}
+	if(ide==131){name= "Lapras" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png"}
+	if(ide==132){name= "Ditto" , sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"}
+	if(ide==133){name= "Eevee" , sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png"}
+	if(ide==134){name= "Vaporeon" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png"}
+	if(ide==135){name= "Jolteon" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png"}
+	if(ide==136){name= "Flareon" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png"}
+	if(ide==137){name= "Porygon" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png"}
+	if(ide==138){name= "Omanyte" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png"}
+	if(ide==139){name= "Omastar" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png"}
+	if(ide==140){name= "Kabuto" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png"}
+	if(ide==141){name= "Kabutops" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png"}
+	if(ide==142){name= "Aerodactyl" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png"}
+	if(ide==143){name= "Snorlax" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"}
+	if(ide==144){name= "Articuno" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png"}
+	if(ide==145){name= "Zapdos", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png"}
+	if(ide==146){name= "Moltres" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png"}
+	if(ide==147){name= "Dratini", sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png"}
+	if(ide==148){name= "Dragonair" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png"}
+	if(ide==149){name= "Dragonite" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"}
+	if(ide==150){name= "Mewtwo" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"}
+	if(ide==151){name= "Mew" ,sprite= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png"}
+
+	var arr=[name,sprite];
+	return arr;
+	
+}
+}
