@@ -14,7 +14,7 @@ if(req.params.id>0 && req.params.id<152)
 }
 else
 {
-	var result=("Sorry!!!!NO POKEMON IS FOUND");
+	res.status(404).send('Sorry!!NO POKEMON IS FOUND!!!');
 }
 res.send(result);
 });
