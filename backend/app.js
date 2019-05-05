@@ -7,16 +7,19 @@ if(req.params.id>0 && req.params.id<152)
 	var pokemon= mymod.pokedetails(req.params.id);
 	var result=
 	{
+	 "pokemon" : {
 	   id :  parseInt(req.params.id) ,
-	   Name :    pokemon[0],
-	   Sprite :  pokemon[1]
+	   name :    pokemon[0],
+	   sprite :  pokemon[1]
+	 }
 	}
+	res.send(result);
 }
 else
 {
 	res.status(404).send('Sorry!!NO POKEMON IS FOUND!!!');
 }
-res.send(result);
+
 });
 app.get('*', function(req, res){
    res.status(404).send('Sorry!!The requested URL is not found!!!');   
